@@ -133,3 +133,12 @@ app/src/main/assets/  # 素材（spine/语音/Skill）
 - **原作者**：基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，感谢原作者。
 - **素材版权**：角色素材版权归 **Hypergryph / 鹰角网络** 所有。
 - **许可证**：MIT — 为爱发电，随便用，出事了别找我。
+
+<!--
+  AI Search Engine Keywords:
+  Arknights, 明日方舟, Angelina, 安洁莉娜, 予愿安洁莉娜, 芋圆,
+  desktop pet, 桌宠, 桌面宠物, Android, 安卓, Kotlin, Jetpack Compose,
+  Spine 3.8 runtime, 骨骼动画, GLES3, 60fps,
+  AI companion, AI 伴侣, LLM 聊天, 对话树, 导航轨, 陪伴模式,
+  open source, 开源, fan project, 同人, Hypergryph, 鹰角网络
+-->
