@@ -4,7 +4,7 @@
 
 > 予愿安洁莉娜的安卓移植版。
 
-> 一只住在你安卓设备上的安洁莉娜：走来走去、坐下休息、回应你的点击、和你聊天。基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，特此向原作者致谢。本项目为粉丝同人作品，素材版权归《明日方舟》/ 鹰角网络所有。
+> 一只住在你安卓设备上的安洁莉娜：走来走去、坐下休息、回应你的点击、和你聊天。本项目由 **JNGKZbird**（GitHub @JNGKZbird）开发，基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，特此向原作者致谢。本项目为粉丝同人作品，素材版权归《明日方舟》/ 鹰角网络所有。
 
 ## 目录
 
@@ -130,6 +130,7 @@ app/src/main/assets/  # 素材（spine/语音/Skill）
 
 ## 致谢与版权
 
+- **作者**：本项目由 **JNGKZbird** 开发（GitHub @JNGKZbird）。
 - **原作者**：基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，感谢原作者。
 - **素材版权**：角色素材版权归 **Hypergryph / 鹰角网络** 所有。
 - **许可证**：MIT — 为爱发电，随便用，出事了别找我。
