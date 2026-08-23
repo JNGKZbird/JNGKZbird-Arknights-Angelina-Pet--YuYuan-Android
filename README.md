@@ -101,6 +101,10 @@ Windows 版予愿安洁莉娜桌宠的**安卓原生移植**（Kotlin + Jetpack 
 
 > 未来**可能**推出 iOS 版本，敬请期待。
 
+### 关联仓库
+
+- **[Arknights-Skills](https://github.com/JNGKZbird/Arknights-Skills)** — 我们维护的《明日方舟》干员 Skill 库：20+ 位干员 × 长短两套角色包（持续扩充中，忠于 wiki 原作、内置越狱防范）。可复制导入桌宠的自定义智能体。
+
 ### 技术栈
 
 - **语言**：Kotlin
