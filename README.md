@@ -1,6 +1,15 @@
-# 予愿安洁莉娜桌宠（安卓版）
+# 予愿安洁莉娜桌宠（安卓版）· 三端开源
 
 ![予愿安洁莉娜](assets/avatar.png)
+
+## 项目生态：三端开源 + 干员人格蒸馏库
+
+| 仓库 | 平台 | 说明 |
+|---|---|---|
+| [Windows 版](https://github.com/JNGKZbird/Arknights-Angelina-Pet-YuYuan) | Windows | Python + PySide6 主仓库 · 自研 Spine 3.8 骨骼引擎 · 120 帧 |
+| [鸿蒙版](https://github.com/JNGKZbird/Arknights-Angelina-Pet-YuYuan-HarmonyOS-NEXT) | HarmonyOS NEXT | 先行完整版 · 小窗模式 · 陪伴模式 · 对话树 |
+| **本仓库** | Android | Kotlin + Compose · 基于鸿蒙版移植 |
+| [Arknights-Persona-Distill](https://github.com/JNGKZbird/Arknights-Persona-Distill) | 干员人格蒸馏库（预览版） | 官方文本蒸馏人格包：单角色 / 双向对戏 / 多角色同台 · 忠于 wiki 原作 · 持续扩充中 |
 
 > 予愿安洁莉娜的安卓移植版。
 
