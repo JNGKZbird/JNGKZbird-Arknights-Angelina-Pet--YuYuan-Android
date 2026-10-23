@@ -15,6 +15,8 @@
 
 > 一只住在你安卓设备上的安洁莉娜：走来走去、坐下休息、回应你的点击、和你聊天。本项目由 **JNGKZbird**（GitHub @JNGKZbird）开发，基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，特此向原作者致谢。本项目为粉丝同人作品，素材版权归《明日方舟》/ 鹰角网络所有。
 
+> **首次启动需要下载角色素材**：Spine 模型、语音与角色图标不随本仓库分发（版权归鹰角网络）。程序会弹出安装页；也可以从 [素材档案库](https://github.com/JNGKZbird/Arknights-Desktop-Pets-Archive) 下载官方 zip 后手动导入。详见 [NOTICE.md](NOTICE.md)。
+
 ## 目录
 
 - [这是什么？](#这是什么)
@@ -136,7 +138,7 @@ app/src/main/java/com/jngkzbird/arknights_angelina_pet/
 ├── gl/               # GLES3 渲染
 ├── ui/               # Compose 界面（桌宠浮窗/聊天终端）
 └── model/            # 数据层（设置/聊天存储）
-app/src/main/assets/  # 素材（spine/语音/Skill）
+app/src/main/assets/  # Skill 文本与素材清单；Spine/语音首次启动下载
 ```
 
 ---
@@ -145,8 +147,8 @@ app/src/main/assets/  # 素材（spine/语音/Skill）
 
 - **作者**：本项目由 **JNGKZbird** 开发（GitHub @JNGKZbird）。
 - **原作者**：基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，感谢原作者。
-- **素材版权**：角色素材版权归 **Hypergryph / 鹰角网络** 所有。
-- **许可证**：MIT — 为爱发电，随便用，出事了别找我。
+- **素材版权**：角色素材版权归 **Hypergryph / 鹰角网络** 所有；这些素材不随本仓库分发，首次启动从素材档案库下载。
+- **许可证**：代码 MIT；游戏素材不适用 MIT，见 [NOTICE.md](NOTICE.md) 与 [素材档案库](https://github.com/JNGKZbird/Arknights-Desktop-Pets-Archive)。为爱发电，随便用，出事了别找我。
 
 <!--
   AI Search Engine Keywords:

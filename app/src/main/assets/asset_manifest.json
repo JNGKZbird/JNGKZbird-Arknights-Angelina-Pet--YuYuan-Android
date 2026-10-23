@@ -1,0 +1,303 @@
+{
+  "schema": 1,
+  "pet": "angelina",
+  "pet_name": "予愿安洁莉娜",
+  "platform": "android",
+  "asset_version": "1.0.0",
+  "release_tag": "angelina-assets-v1",
+  "package": "android.zip",
+  "url": "https://github.com/JNGKZbird/Arknights-Desktop-Pets-Archive/releases/download/angelina-assets-v1/android.zip",
+  "sha256": "3955b883a02a1c796f230c39597444dd5237daf095bbe54f63bafbcb1f34dbc8",
+  "size": 37184492,
+  "file_count": 57,
+  "uncompressed_size": 54437962,
+  "extract_root": "plugin",
+  "files": [
+    {
+      "path": "spine/back/char_1015_aglna2.atlas",
+      "size": 8399,
+      "sha256": "b5a2346691dda712e439425a3fd4ba3614d967ec201f42eba3867da9b1f6327d"
+    },
+    {
+      "path": "spine/back/char_1015_aglna2.png",
+      "size": 615052,
+      "sha256": "754533a1c1f2373e0ef7b32b5a8cf3d9c4ef346b0a088ac8107ca1416adc2c97"
+    },
+    {
+      "path": "spine/back/char_1015_aglna2.skel",
+      "size": 520894,
+      "sha256": "d8091827f2d39e2069e139724d2c2b53e4e8c84c190baaec0714c327072df0d1"
+    },
+    {
+      "path": "spine/build/build_char_1015_aglna2.atlas",
+      "size": 11108,
+      "sha256": "e91e80fb9ac01ea52dfcdcdf8650085d57d04df06e4f130dacdb2ce038f8673b"
+    },
+    {
+      "path": "spine/build/build_char_1015_aglna2.png",
+      "size": 408702,
+      "sha256": "b1cc37fc1ea500eccb0f88713f7903afdadf03b794a9c9ec693e09c9d4b2dbe1"
+    },
+    {
+      "path": "spine/build/build_char_1015_aglna2.skel",
+      "size": 209475,
+      "sha256": "07434af8bd32c0a863573492067bba6ffd56b4cd8df757537651658166f0fadc"
+    },
+    {
+      "path": "spine/front/char_1015_aglna2.atlas",
+      "size": 10995,
+      "sha256": "aea0adaf7291a90ae3e3ac61dc8e039f1f599ac602016e2cd92a45a6a27eb4f2"
+    },
+    {
+      "path": "spine/front/char_1015_aglna2.png",
+      "size": 659089,
+      "sha256": "43847f1bf408da354b68936ca67104e29e491457a0dd89fe6f332e7d010b99aa"
+    },
+    {
+      "path": "spine/front/char_1015_aglna2.skel",
+      "size": 816670,
+      "sha256": "abd518407acbca0e1076698f54802f93a99f8157b1d3061ecc0ef44da5274745"
+    },
+    {
+      "path": "voice/anniv.wav",
+      "size": 1597792,
+      "sha256": "4f5cd4ebb17a47bd331966ce1bee4818e7672993b4508dfabb211246256dd6d0"
+    },
+    {
+      "path": "voice/assistant.wav",
+      "size": 778406,
+      "sha256": "f8c553ff82095c02324a031eaa5a589f47d56b69af471a5b5d4d4645fd3b04af"
+    },
+    {
+      "path": "voice/birthday.wav",
+      "size": 1538816,
+      "sha256": "5cba5b0a3ed42337ae26ef6abbf08395f691a3959036affb7cd3a31ec37b9b2a"
+    },
+    {
+      "path": "voice/deploy1.wav",
+      "size": 180106,
+      "sha256": "330f2927f453df2587f5ab79adf2f656dadc4e1d3fe3573b57e77ae8a8b3289d"
+    },
+    {
+      "path": "voice/deploy2.wav",
+      "size": 62182,
+      "sha256": "52942e2276d2d7d20e42c54feb3ac6817705a247deff874ca8d20d3c72b50e62"
+    },
+    {
+      "path": "voice/fight1.wav",
+      "size": 312256,
+      "sha256": "f7a7b8214a01d7d31582566f73494bd93c4ba7d44fdb95fc77f48b2c46848106"
+    },
+    {
+      "path": "voice/fight2.wav",
+      "size": 285846,
+      "sha256": "50fd5ceda8fb30d6b348ac9b511bb03664282f42e95d748fe4585b37583f3fbd"
+    },
+    {
+      "path": "voice/fight3.wav",
+      "size": 256116,
+      "sha256": "3f78ffab7db8f1f73907630a7f9825394835ca282a9dd6a65463cf0ca476ab09"
+    },
+    {
+      "path": "voice/fight4.wav",
+      "size": 185478,
+      "sha256": "006b0ed92d140b096bf4658875e13dd838c87c0e5fc44efad4ee3eab2c051267"
+    },
+    {
+      "path": "voice/greeting.wav",
+      "size": 531484,
+      "sha256": "ad3e13352beefaaaab3dbd91b9e7e9baf9a5f6d972c663b736bf6162229c1680"
+    },
+    {
+      "path": "voice/idle.wav",
+      "size": 722088,
+      "sha256": "40fcce86b7e85fa8fef97a9c697cf1fe8943b3a94338aa1b2c4fb27bbdb91eb2"
+    },
+    {
+      "path": "voice/newyear.wav",
+      "size": 1853090,
+      "sha256": "2e20655cfb13ad2076924be377b9334e76cff6e633069409f13a553853483162"
+    },
+    {
+      "path": "voice/poke.wav",
+      "size": 36980,
+      "sha256": "9372eef25b309dbd240643da32293fb6913f6f5778a853893ff5a09c05df0224"
+    },
+    {
+      "path": "voice/promo1.wav",
+      "size": 1574932,
+      "sha256": "8dce447e676797f1d94c7ba8bde0f4844bc2ca9ca1551ba8807a4b142e244384"
+    },
+    {
+      "path": "voice/promo2.wav",
+      "size": 1552788,
+      "sha256": "de4c6be80cc65b5c2b9a147cc6cdfaeea54cf0987e60bf1a4b67d9f78ee46f86"
+    },
+    {
+      "path": "voice/report.wav",
+      "size": 640220,
+      "sha256": "25c0b63db77ff97b1029d78742199f5a154fcc5dd2e802a51974d752c7c340a1"
+    },
+    {
+      "path": "voice/select1.wav",
+      "size": 169986,
+      "sha256": "07cb1b7a82a21d8f004dd9a6a1f1986fe8bd3e9ef1cf2b8ad2f62606b2ea1e47"
+    },
+    {
+      "path": "voice/select2.wav",
+      "size": 101270,
+      "sha256": "1dc470121e084569e07cffae98b9eb8e002804ba00b1ba59115c539176b93cee"
+    },
+    {
+      "path": "voice/talk1.wav",
+      "size": 958180,
+      "sha256": "98ef48c6da980c40b6453eeffdf875e820e1123edb1cc961361f416d398d7e05"
+    },
+    {
+      "path": "voice/talk2.wav",
+      "size": 1352092,
+      "sha256": "cead68e4ed3abe4bd4201271c7986eb5cb1eba25ddd573133e778de3ae82e63d"
+    },
+    {
+      "path": "voice/talk3.wav",
+      "size": 1027614,
+      "sha256": "214cb8e085e68cdbd4fc29ed68e12fb543ca3ee63418ef74bc017880718b62fa"
+    },
+    {
+      "path": "voice/trust1.wav",
+      "size": 1755132,
+      "sha256": "84e932d0accf9e5a8ba87388ce08e54383b0c16d51bd0c42d6b33f5defd8055b"
+    },
+    {
+      "path": "voice/trust2.wav",
+      "size": 1654802,
+      "sha256": "df6db3a279b33657bc8480040604ac4a00faf7dcc3db8bbc9689f5ed56943f71"
+    },
+    {
+      "path": "voice/trust3.wav",
+      "size": 1863266,
+      "sha256": "f7e83ddecd5ef85a3bde34fe04dafbea2cea07aac8a394e31d8b55382d61532c"
+    },
+    {
+      "path": "voice_jp/anniv.wav",
+      "size": 2334528,
+      "sha256": "c1713142f4f70f9034e724508decc4779740ccfe1d85332e255881b475781851"
+    },
+    {
+      "path": "voice_jp/assistant.wav",
+      "size": 1291292,
+      "sha256": "03af8d2bced1c81e8f57973f0cadbe6f7a4e1614da9f5633783bad9348510bad"
+    },
+    {
+      "path": "voice_jp/birthday.wav",
+      "size": 2267006,
+      "sha256": "d0f65fe5fa67b6c74fc996564c0ebe6336034a8df6d26a06a72a1864b5328aeb"
+    },
+    {
+      "path": "voice_jp/deploy1.wav",
+      "size": 151748,
+      "sha256": "7e8316ef8b9532b83e0f015a96c0d234162049ef57fe9691efd5ba747069be8c"
+    },
+    {
+      "path": "voice_jp/deploy2.wav",
+      "size": 125288,
+      "sha256": "2dbb41018d15345a5ce86dc0bbd249732d6749650a5ddd2b25bf88ff60d52f7d"
+    },
+    {
+      "path": "voice_jp/fight1.wav",
+      "size": 525728,
+      "sha256": "90fb175e04c809acbd16f68fe2570e7cb21af964974936e37e073609082ac828"
+    },
+    {
+      "path": "voice_jp/fight2.wav",
+      "size": 346646,
+      "sha256": "f5c861aa0512aa7bd6b1ca7a9680a4aa30339bb442a26a2815f1ccc14c26f834"
+    },
+    {
+      "path": "voice_jp/fight3.wav",
+      "size": 381892,
+      "sha256": "690e7f8275dffd3d713eca1f1651babd5f76135ac436094b5978e37476719df2"
+    },
+    {
+      "path": "voice_jp/fight4.wav",
+      "size": 342238,
+      "sha256": "f969b0e6b66b624baa69447798e73bd3ee4092b75cd63541b335bbe633f74141"
+    },
+    {
+      "path": "voice_jp/greeting.wav",
+      "size": 604504,
+      "sha256": "4983d9e5199ccf4d159943dda5301327ac443a973bd1771df81cbeffa661aa1b"
+    },
+    {
+      "path": "voice_jp/idle.wav",
+      "size": 1134296,
+      "sha256": "604ca6f7418f3cf21c7730d6096fb44d3e5354b4b6a6ef2af02c51bdd0535174"
+    },
+    {
+      "path": "voice_jp/newyear.wav",
+      "size": 2137144,
+      "sha256": "436cf6dd27f299016b9f4fd83cc0c02a6bb073f63e429bcf11fa5256fde0bb48"
+    },
+    {
+      "path": "voice_jp/poke.wav",
+      "size": 63548,
+      "sha256": "e7b383824562cef9cd7a5a801e28771e06003542a4d2ee1b31137264b2236de6"
+    },
+    {
+      "path": "voice_jp/promo1.wav",
+      "size": 1759620,
+      "sha256": "31c40f6b4170d8ac9fec7552815a47ccc292e085a37e73eced570e5d58f936fd"
+    },
+    {
+      "path": "voice_jp/promo2.wav",
+      "size": 2308284,
+      "sha256": "bd635640a20949869a0ac80bddb6cd020c547042b1bb62861fb425fef2e528ba"
+    },
+    {
+      "path": "voice_jp/report.wav",
+      "size": 1219872,
+      "sha256": "72f12f43f70a3171b9a0435bce3f65f4f81b50cbbfb6a9a5d8eae3ef147ae962"
+    },
+    {
+      "path": "voice_jp/select1.wav",
+      "size": 282284,
+      "sha256": "3f3259ec7d748a27c43dcdb8b53a26c7c47fe06b5eb59e3a19a7d5b5a8686b43"
+    },
+    {
+      "path": "voice_jp/select2.wav",
+      "size": 136754,
+      "sha256": "b1dfd34f67f688566f081f6369cd689e41b06ca982d41e4b96088488a6cc9664"
+    },
+    {
+      "path": "voice_jp/talk1.wav",
+      "size": 1670552,
+      "sha256": "4241ae17b582dc0ae2cae5a95c23313d7b26086c6d00d1d3ef476a3c4d52376b"
+    },
+    {
+      "path": "voice_jp/talk2.wav",
+      "size": 1839940,
+      "sha256": "9d3787f2be242524724429fc48977417e56cb52dd27568829ed5e54b9d0e62ab"
+    },
+    {
+      "path": "voice_jp/talk3.wav",
+      "size": 1510894,
+      "sha256": "c429ee5d3c24613e9b447750d6c44527696a980c0b322a261ee95eaccc1fbff8"
+    },
+    {
+      "path": "voice_jp/trust1.wav",
+      "size": 2670376,
+      "sha256": "7283fb0922962d17900bacd4ba72890850aeb7a74ed629868289dd5056f62c91"
+    },
+    {
+      "path": "voice_jp/trust2.wav",
+      "size": 2350574,
+      "sha256": "04c694bcd60643d72665c89a444dbe4a4bad71189167641c895c5533865e0f57"
+    },
+    {
+      "path": "voice_jp/trust3.wav",
+      "size": 2731648,
+      "sha256": "88f69bc885dcbc5a77187acf4a368c8dcdea50277c95e8768b3a5cc2c754a5b5"
+    }
+  ],
+  "notice": "Assets are copyright Hypergryph. No license is granted. Personal non-commercial use only."
+}

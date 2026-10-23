@@ -26,6 +26,7 @@ import com.jngkzbird.arknights_angelina_pet.engine.ST_SLEEP
 import com.jngkzbird.arknights_angelina_pet.engine.computeModelLayout
 import com.jngkzbird.arknights_angelina_pet.engine.finalizeLayouts
 import com.jngkzbird.arknights_angelina_pet.gl.PetGLRenderer
+import com.jngkzbird.arknights_angelina_pet.model.AssetStore
 import com.jngkzbird.arknights_angelina_pet.spine38.AtlasAttachmentLoaderImpl
 import com.jngkzbird.arknights_angelina_pet.spine38.RenderTransform
 import com.jngkzbird.arknights_angelina_pet.spine38.Skeleton
@@ -34,6 +35,7 @@ import com.jngkzbird.arknights_angelina_pet.spine38.SkeletonData
 import com.jngkzbird.arknights_angelina_pet.spine38.TextureAtlas
 import com.jngkzbird.arknights_angelina_pet.spine38.apply_animation
 import com.jngkzbird.arknights_angelina_pet.spine38.collect_triangles
+import java.io.File
 
 /**
  * 桌宠视图：FrameLayout 容器 = GL TextureView（全屏透明）+ 菜单子视图。
@@ -90,8 +92,9 @@ class PetGLTextureView(context: Context) : FrameLayout(context), TextureView.Sur
     private val uiHandler = Handler(Looper.getMainLooper())
     private val longPressRunnable = Runnable { onLongPressed() }
 
-    // ── 语音与字幕 ──
-    private val voice = VoicePlayer(context)
+    // ── 角色素材（filesDir 插件目录）与语音 ──
+    private val assetStore = AssetStore(context)
+    private val voice = VoicePlayer(assetStore.pluginDir)
     private var subtitleView: TextView? = null
     private var idleVoicePlayed = false
 
@@ -210,14 +213,15 @@ class PetGLTextureView(context: Context) : FrameLayout(context), TextureView.Sur
     // ── 素材加载（按模型缓存；可在渲染线程调用） ──
     private fun loadModelAssets(model: String): ModelAssets {
         modelCache[model]?.let { return it }
-        val assets = context.assets
         val dir = "spine/$model"
+        val base = File(assetStore.pluginDir, dir)
         val skelName = if (model == "build") "build_char_1015_aglna2.skel" else "char_1015_aglna2.skel"
         val atlasName = if (model == "build") "build_char_1015_aglna2.atlas" else "char_1015_aglna2.atlas"
         val pngName = if (model == "build") "build_char_1015_aglna2.png" else "char_1015_aglna2.png"
-        val skelBytes = assets.open("$dir/$skelName").use { it.readBytes() }
-        val atlasText = assets.open("$dir/$atlasName").use { it.readBytes().toString(Charsets.UTF_8) }
-        val bitmap = BitmapFactory.decodeStream(assets.open("$dir/$pngName"))
+        val skelBytes = File(base, skelName).readBytes()
+        val atlasText = File(base, atlasName).readText(Charsets.UTF_8)
+        val bitmap = BitmapFactory.decodeFile(File(base, pngName).absolutePath)
+            ?: throw IllegalStateException("missing texture: $dir/$pngName")
         val atlas = TextureAtlas(atlasText) { bitmap }
         val sd = SkeletonBinary(AtlasAttachmentLoaderImpl(atlas)).read_skeleton_data(skelBytes)
         val ma = ModelAssets(sd, bitmap)

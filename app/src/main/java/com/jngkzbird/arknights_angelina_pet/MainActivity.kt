@@ -38,9 +38,11 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.jngkzbird.arknights_angelina_pet.model.AssetStore
 import com.jngkzbird.arknights_angelina_pet.model.ChatApi
 import com.jngkzbird.arknights_angelina_pet.model.ChatStore
 import com.jngkzbird.arknights_angelina_pet.model.SettingsStore
+import com.jngkzbird.arknights_angelina_pet.ui.AssetSetupScreen
 import com.jngkzbird.arknights_angelina_pet.ui.PetGLTextureView
 import com.jngkzbird.arknights_angelina_pet.ui.theme.AngelinaPetTheme
 import com.jngkzbird.arknights_angelina_pet.ui.theme.ThemeTokens
@@ -173,6 +175,29 @@ class MainActivity : ComponentActivity() {
         val controller = WindowCompat.getInsetsController(window, window.decorView)
         controller.hide(WindowInsetsCompat.Type.systemBars())
         controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+
+        // 角色素材不随 APK 分发：缺素材时阻断在安装页，安装完成后 recreate 进入正常界面。
+        val assetStore = try {
+            AssetStore(this, intent?.getStringExtra("asset_url"))
+        } catch (e: Exception) {
+            android.widget.Toast.makeText(
+                this,
+                "素材清单缺失：" + (e.message ?: e.javaClass.simpleName),
+                android.widget.Toast.LENGTH_LONG
+            ).show()
+            finish()
+            return
+        }
+        if (!assetStore.isInstalled()) {
+            val setupTheme = if (SettingsStore.loadTheme(this) == "lime") ThemeTokens.LIME else ThemeTokens.SKY
+            setContent {
+                AngelinaPetTheme {
+                    AssetSetupScreen(assetStore, setupTheme) { recreate() }
+                }
+            }
+            return
+        }
+
         setContent {
             AngelinaPetTheme {
                 var theme by remember { mutableStateOf(if (SettingsStore.loadTheme(this@MainActivity) == "lime") ThemeTokens.LIME else ThemeTokens.SKY) }

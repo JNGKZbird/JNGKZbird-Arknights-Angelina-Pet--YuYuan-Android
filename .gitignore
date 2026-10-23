@@ -11,3 +11,7 @@ local.properties
 
 # 构建产物
 app/build/
+# 游戏素材（首次启动下载，不入库）
+app/src/main/assets/spine/
+app/src/main/assets/voice/
+app/src/main/assets/voice_jp/

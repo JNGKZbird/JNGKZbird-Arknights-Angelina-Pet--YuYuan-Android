@@ -1,15 +1,15 @@
 package com.jngkzbird.arknights_angelina_pet.ui
 
-import android.content.Context
 import android.media.MediaPlayer
 import android.util.Log
+import java.io.File
 import java.util.Calendar
 
 /**
  * 安洁莉娜语音 — 鸿蒙版 Voice 模型 + PetPage 语音逻辑移植。
  * SoundPool 播放（低延迟音效）；触发：点击（10s 冷却内=戳一下）/闲置 60s/启动问候/模式切换。
  */
-class VoicePlayer(private val context: Context) {
+class VoicePlayer(private val assetRoot: File) {
     companion object {
         private const val TAG = "PetGL"
 
@@ -89,14 +89,13 @@ class VoicePlayer(private val context: Context) {
         reload()
     }
 
-    private fun voiceDir(): String = if (language == "日文") "voice_jp/" else "voice/"
+    private fun voiceDir(): File = File(assetRoot, if (language == "日文") "voice_jp" else "voice")
 
     private fun reload() {
         // MediaPlayer 每次播放即时加载（wav 小文件），reload 仅做目录存在性验证
-        try {
-            context.assets.openFd(voiceDir() + "talk1.wav").use { }
-        } catch (e: Exception) {
-            Log.w("PetGL", "voice dir check fail: ${voiceDir()} ${e.message}")
+        val probe = File(voiceDir(), "talk1.wav")
+        if (!probe.isFile) {
+            Log.w("PetGL", "voice dir check fail: ${probe.absolutePath}")
         }
     }
 
@@ -116,9 +115,13 @@ class VoicePlayer(private val context: Context) {
         try {
             currentPlayer?.release()
             currentPlayer = null
-            val fd = context.assets.openFd(voiceDir() + (VOICE_FILES[name] ?: return))
+            val file = File(voiceDir(), VOICE_FILES[name] ?: return)
+            if (!file.isFile) {
+                Log.w("PetGL", "voice file missing: ${file.absolutePath}")
+                return
+            }
             val mp = MediaPlayer()
-            mp.setDataSource(fd.fileDescriptor, fd.startOffset, fd.length)
+            mp.setDataSource(file.absolutePath)
             mp.setOnCompletionListener { p ->
                 p.release()
                 if (currentPlayer === p) {
@@ -128,7 +131,6 @@ class VoicePlayer(private val context: Context) {
             mp.prepare()
             mp.start()
             currentPlayer = mp
-            fd.close()
         } catch (e: Exception) {
             Log.w("PetGL", "voice play FAILED: $name ${e.message}")
         }
