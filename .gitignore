@@ -9,6 +9,10 @@
 .cxx
 local.properties
 
+# 签名凭据（本地专用，勿入库）
+keystore.properties
+*.jks
+
 # 构建产物
 app/build/
 # 游戏素材（首次启动下载，不入库）
