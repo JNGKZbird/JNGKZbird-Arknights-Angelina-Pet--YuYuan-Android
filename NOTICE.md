@@ -34,11 +34,12 @@
 
 素材仅供个人非商业使用；不得用于商业用途，不得损害版权方利益。如权利方提出要求，仓库所有者应停止分发并删除相关内容。
 
-## 4. 四端实现
+## 4. 三端实现
 
 - Python + PySide6（Windows，主仓库）
-- TypeScript + Tauri v2（Windows，第四端，仓库整理中）
 - ArkTS + C++ GLES3（HarmonyOS，本项目衍生实现，先行版）
 - Kotlin + Compose（Android，本仓库，基于鸿蒙版衍生实现）
 
-鸿蒙版与安卓版是本项目在官方 spine-ts 3.8 运行时基础上的衍生实现；四端是四套独立代码，分别用 Python、TypeScript、ArkTS、Kotlin 实现。
+予愿安洁莉娜是三套独立代码，分别用 Python、ArkTS、Kotlin 实现；鸿蒙版与安卓版是本项目在官方 spine-ts 3.8 运行时基础上的衍生实现。
+
+关联项目：独立的《捣蛋鬼》（能天使）Tauri v2 版使用同源 Spine 3.8 技术栈，不属于本作三端。
