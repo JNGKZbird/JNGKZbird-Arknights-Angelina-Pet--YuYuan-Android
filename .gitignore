@@ -19,3 +19,6 @@ app/build/
 app/src/main/assets/spine/
 app/src/main/assets/voice/
 app/src/main/assets/voice_jp/
+
+# 测试用本地素材（不随仓库分发；缺失时指纹测试自动跳过）
+app/src/test/resources/spine/

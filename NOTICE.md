@@ -26,6 +26,8 @@
 
 游戏素材（Spine 模型/骨骼/贴图、语音、角色图标、头像等）版权归上海鹰角网络有限公司所有，**不适用 MIT，也不随本仓库分发**；Spine 许可同样不覆盖这些素材。
 
+例外：应用启动图标（`app/src/main/res/drawable-nodpi/avatar.png`、`mipmap-*/ic_launcher*`）使用角色头像，随本仓库分发，仅用于标识本应用。
+
 首次启动时会从素材档案库下载：
 
 <https://github.com/JNGKZbird/Arknights-Desktop-Pets-Archive>

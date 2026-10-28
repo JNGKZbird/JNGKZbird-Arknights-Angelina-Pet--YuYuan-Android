@@ -1,13 +1,19 @@
 package com.jngkzbird.arknights_angelina_pet.spine38
 
 import org.junit.Assert.assertTrue
+import org.junit.Assume
 import org.junit.Test
+import java.io.File
 import kotlin.math.abs
 
 /**
  * spine38 Kotlin 移植指纹验证 — 期望值来自鸿蒙版 TestPage（Python 基准，真机验证通过）。
  * 骨架指纹：setup 姿态骨和 + 包围盒 + update_cache 长度。
  * 动画指纹：30 个检查点（model|anim|t|fx|fy|bounds）。
+ *
+ * 测试素材（官方 Spine 骨骼/atlas）不随仓库分发：通过 -Dangelina.spine.dir=<目录>
+ * 或环境变量 ANGELINA_SPINE_DIR 指向本地素材，也可放到 app/src/test/resources/spine/
+ * （已被 .gitignore 忽略）；找不到素材时测试自动跳过。
  */
 class Spine38FingerprintTest {
 
@@ -79,9 +85,37 @@ class Spine38FingerprintTest {
         "front|Idle|2|-1270.523441|33184.015587|-270.64|-1.64|433.96|420.51"
     )
 
+    /**
+     * 定位本地 Spine 测试素材。目录约定：<root>/spine/{build,back,front}/...
+     * 未配置或文件缺失时跳过测试（素材不随仓库分发）。
+     */
+    private fun spineRoot(): File? {
+        val configured = System.getProperty("angelina.spine.dir") ?: System.getenv("ANGELINA_SPINE_DIR")
+        val candidates = ArrayList<File>()
+        if (!configured.isNullOrBlank()) {
+            val dir = File(configured)
+            candidates.add(if (File(dir, "spine").isDirectory) File(dir, "spine") else dir)
+        }
+        candidates.add(File("src/test/resources/spine"))
+        candidates.add(File("app/src/test/resources/spine"))
+        return candidates.firstOrNull { it.isDirectory }
+    }
+
+    private fun requireAsset(relative: String): File {
+        val root = spineRoot()
+        Assume.assumeTrue(
+            "未找到 Spine 测试素材。请设置 -Dangelina.spine.dir=<素材目录> 或 ANGELINA_SPINE_DIR，" +
+                "或把素材放到 app/src/test/resources/spine/",
+            root != null
+        )
+        val file = File(root!!, relative.removePrefix("spine/"))
+        Assume.assumeTrue("缺少测试素材：${file.path}", file.isFile)
+        return file
+    }
+
     private fun loadSkeletonData(model: String): SkeletonData {
-        val path = "spine/$model/${if (model == "build") "build_char_1015_aglna2.skel" else "char_1015_aglna2.skel"}"
-        val bytes = javaClass.classLoader!!.getResourceAsStream(path)!!.readBytes()
+        val name = if (model == "build") "build_char_1015_aglna2.skel" else "char_1015_aglna2.skel"
+        val bytes = requireAsset("spine/$model/$name").readBytes()
         return SkeletonBinary(StubLoader()).read_skeleton_data(bytes)
     }
 
@@ -188,10 +222,8 @@ class Spine38FingerprintTest {
     @Test
     fun meshUvsMatchPythonReference() {
         // Python 基准（2026-08-19 生成）：F_R_Braid_B uvs 前 4 个 + 独立 UV 对总数
-        val path = "spine/build/build_char_1015_aglna2.skel"
-        val atlasPath = "spine/build/build_char_1015_aglna2.atlas"
-        val bytes = javaClass.classLoader!!.getResourceAsStream(path)!!.readBytes()
-        val atlasText = javaClass.classLoader!!.getResourceAsStream(atlasPath)!!.readBytes().toString(Charsets.UTF_8)
+        val bytes = requireAsset("spine/build/build_char_1015_aglna2.skel").readBytes()
+        val atlasText = requireAsset("spine/build/build_char_1015_aglna2.atlas").readText(Charsets.UTF_8)
         val atlas = TextureAtlas(atlasText)
         val sd = SkeletonBinary(AtlasAttachmentLoaderImpl(atlas)).read_skeleton_data(bytes)
         val sk = Skeleton(sd)
