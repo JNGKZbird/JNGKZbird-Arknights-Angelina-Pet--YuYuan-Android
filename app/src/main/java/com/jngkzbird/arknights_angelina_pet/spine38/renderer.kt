@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: LicenseRef-Spine-Runtimes-3.8
-// Derived from Esoteric Software's spine-ts 3.8 (Spine Runtimes).
+// Uses/renders data from code derived from Esoteric Software's spine-ts 3.8.
 // Part of the Spine Runtimes integration in this project; NOT MIT.
 // License texts: LICENSES/Spine-Runtimes-License-3.8.txt
 //               LICENSES/Spine-Runtimes-License-2025.txt
