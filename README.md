@@ -4,7 +4,7 @@
 
 > **许可**：本项目持有 Esoteric Software 的 **Spine Editor 许可（Spine Essential）** · `app/src/main/java/com/jngkzbird/arknights_angelina_pet/spine38/` 衍生自官方 **spine-ts 3.8**，按 **Spine Runtimes License** 使用 · 三端实现，鸿蒙与安卓为本项目衍生。详见 [许可与来源](#许可与来源)。
 
-## 项目生态：三端实现 + 干员人格蒸馏库
+## 项目生态：三端实现、干员人格蒸馏库与关联项目
 
 | 仓库 | 平台 | 说明 |
 |---|---|---|
@@ -12,6 +12,7 @@
 | [鸿蒙版](https://github.com/JNGKZbird/Arknights-Angelina-Pet-YuYuan-HarmonyOS-NEXT) | HarmonyOS NEXT | ArkTS + C++ GLES3 · 先行完整版 · 小窗模式 · 陪伴模式 · 对话树 · 本项目衍生实现 |
 | **本仓库** | Android | Kotlin + Compose · 基于鸿蒙版衍生实现 · 本项目衍生实现 |
 | [Arknights-Persona-Distill](https://github.com/JNGKZbird/Arknights-Persona-Distill) | 干员人格蒸馏库（预览版） | 官方文本蒸馏人格包：单角色 / 双向对戏 / 多角色同台 · 忠于 wiki 原作 · 持续扩充中 |
+| [捣蛋鬼（Lemuel Scamp）](https://github.com/JNGKZbird/lemuel-scamp) | Windows（Tauri v2） | 同源技术栈上的一次全新尝试：主角是能天使与异格「新约能天使」，目标是把桌宠做得更棒 · TypeScript + Tauri v2 + React 19 · Spine 3.8 的 Tauri v2 轻量升级实现（自研 WebGL 渲染）· 运行时只依赖系统 WebView2，无需 Python 等额外运行时 |
 
 予愿安洁莉娜是三套独立代码：Python（Windows）、ArkTS（HarmonyOS）、Kotlin（Android）。三端共享同一套核心语义：衍生自官方 spine-ts 3.8 的裁剪管线、加权 deform 权重条目索引、状态包围盒底边布局锚定。鸿蒙版与安卓版是本项目在官方运行时基础上的衍生实现。
 
@@ -28,7 +29,7 @@
 - **Spine Editor 许可**：本项目持有 Esoteric Software 的 **Spine Editor 许可（Spine Essential）**，并按 [Spine Editor License Agreement 第 2 节](https://esotericsoftware.com/spine-editor-license)将 Spine Runtimes 集成进本产品。
 - **衍生关系**：`app/src/main/java/com/jngkzbird/arknights_angelina_pet/spine38/` 是官方 **spine-ts 3.8** 运行时的衍生/集成实现，**不是 MIT**；按 [Spine Runtimes License](https://esotericsoftware.com/spine-runtimes-license) 使用。官方许可原文随仓库提供：[2019 版](LICENSES/Spine-Runtimes-License-3.8.txt) · [2025 版（Exhibit A）](LICENSES/Spine-Runtimes-License-2025.txt)。
 - **三端实现**：Python + PySide6（Windows）、ArkTS + C++ GLES3（HarmonyOS）、Kotlin + Compose（Android）。三端是三套独立代码；鸿蒙版与安卓版是本项目在官方运行时基础上的衍生实现。
-- **关联项目**：[捣蛋鬼（能天使）Tauri v2 版](https://github.com/JNGKZbird/lemuel-scamp) 使用同源 Spine 3.8 技术栈，但它是独立项目，不属于予愿安洁莉娜的三端。
+- **关联项目**：[捣蛋鬼（能天使）Tauri v2 版](https://github.com/JNGKZbird/lemuel-scamp) 使用同源 Spine 3.8 技术栈，是一次独立的全新尝试，主角是能天使与异格「新约能天使」。
 - **终端用户与第三方**：因为本项目按 Spine Editor License Agreement 第 2 节集成，终端用户直接使用本软件（不修改代码）不需要购买 Spine；第三方仅原样分发、不做任何修改时，不需要自己的许可，但必须保留 2025 版许可原文（Exhibit A）；第三方修改、适配或衍生包含 Spine Runtimes 的代码或产品，需要自己的 Spine Editor 许可。
 - **素材边界**：游戏素材（Spine 模型/骨骼/贴图、语音、角色图标、头像等）版权归鹰角网络，不适用 MIT，也不随本仓库分发（应用启动图标除外，见 [NOTICE.md](NOTICE.md)）；Spine 许可不覆盖游戏素材。
 - **关系边界**：本项目与 Esoteric Software 没有官方合作或背书关系；上述许可是标准商业许可，不代表 Esoteric Software 对本项目背书。
@@ -38,7 +39,7 @@
 - **License**: This project holds a valid **Spine Editor license (Spine Essential)** from Esoteric Software.
 - **Provenance**: `app/src/main/java/com/jngkzbird/arknights_angelina_pet/spine38/` is a derivative implementation of the official **spine-ts 3.8** runtime and is used under the **Spine Runtimes License**, not the project's MIT license.
 - **Three implementations**: Python + PySide6 (Windows), ArkTS + C++ GLES3 (HarmonyOS), and Kotlin + Compose (Android). The HarmonyOS and Android implementations are our derivatives.
-- **Related project**: The separate ["Trickster" (Exusiai) desktop pet](https://github.com/JNGKZbird/lemuel-scamp) uses a TypeScript + Tauri v2 implementation on the same Spine 3.8 lineage; it is not a fourth implementation of this project.
+- **Related project**: The separate ["Trickster" (Exusiai) desktop pet](https://github.com/JNGKZbird/lemuel-scamp) is a new Tauri v2 project on the same Spine 3.8 lineage, starring Exusiai and Exusiai the New Covenant.
 - **End users / third parties**: Because the integration is under Section 2 of the Spine Editor License Agreement, end users who simply use the software do not need a Spine license; third parties who modify or create derivative works containing the Spine Runtimes need their own Spine Editor license.
 - **Assets**: Game assets are © Hypergryph and are not included in this repository.
 
@@ -146,7 +147,7 @@
 
 ### 关联项目
 
-- **[捣蛋鬼（能天使）Tauri v2 版](https://github.com/JNGKZbird/lemuel-scamp)** — 独立的 TypeScript + Tauri v2 + React 19 桌面宠物项目，使用同源 Spine 3.8 技术栈；不是予愿安洁莉娜的第四端。
+- **[捣蛋鬼（Lemuel Scamp / 能天使）Tauri v2 版](https://github.com/JNGKZbird/lemuel-scamp)** — 同源 Spine 3.8 技术栈上的一次全新尝试：主角是能天使与异格「新约能天使」，TypeScript + Tauri v2 + React 19，轻量、运行时只依赖系统 WebView2。
 
 ### 关联仓库
 
