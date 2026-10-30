@@ -1,4 +1,6 @@
-# 予愿安洁莉娜桌宠（安卓版）· 三端实现 · Spine 3.8
+# 予愿安洁莉娜桌宠（正式名：酸橙味的信）· 安卓版 · 三端实现 · Spine 3.8
+
+> **名称说明**：本作的正式软件名是《酸橙味的信》；「予愿安洁莉娜桌宠」是仓库名与社区常用称呼。安装后的应用名即「酸橙味的信」。
 
 > **许可**：本项目持有 Esoteric Software 的 **Spine Editor 许可（Spine Essential）** · `app/src/main/java/com/jngkzbird/arknights_angelina_pet/spine38/` 衍生自官方 **spine-ts 3.8**，按 **Spine Runtimes License** 使用 · 三端实现，鸿蒙与安卓为本项目衍生。详见 [许可与来源](#许可与来源)。
 
@@ -13,9 +15,7 @@
 
 予愿安洁莉娜是三套独立代码：Python（Windows）、ArkTS（HarmonyOS）、Kotlin（Android）。三端共享同一套核心语义：衍生自官方 spine-ts 3.8 的裁剪管线、加权 deform 权重条目索引、状态包围盒底边布局锚定。鸿蒙版与安卓版是本项目在官方运行时基础上的衍生实现。
 
-> **同一技术谱系的独立项目**：TypeScript + Tauri v2 的《捣蛋鬼》（能天使）桌宠也使用衍生自官方 spine-ts 3.8 的运行时，但它有自己的角色、仓库与产品定位，**不是予愿安洁莉娜的第四端**。
-
-> 予愿安洁莉娜的安卓原生实现，三端之一。
+> 予愿安洁莉娜桌宠（正式名：酸橙味的信）的安卓原生实现，三端之一。
 
 > 一只住在你安卓设备上的安洁莉娜：走来走去、坐下休息、回应你的点击、和你聊天。本项目由 **JNGKZbird**（GitHub @JNGKZbird）开发，基于 [AstrariaX/Angelina-pet](https://github.com/AstrariaX/Angelina-pet) 深度重做，特此向原作者致谢。本项目为粉丝同人作品，素材版权归《明日方舟》/ 鹰角网络所有。
 
@@ -28,7 +28,7 @@
 - **Spine Editor 许可**：本项目持有 Esoteric Software 的 **Spine Editor 许可（Spine Essential）**，并按 [Spine Editor License Agreement 第 2 节](https://esotericsoftware.com/spine-editor-license)将 Spine Runtimes 集成进本产品。
 - **衍生关系**：`app/src/main/java/com/jngkzbird/arknights_angelina_pet/spine38/` 是官方 **spine-ts 3.8** 运行时的衍生/集成实现，**不是 MIT**；按 [Spine Runtimes License](https://esotericsoftware.com/spine-runtimes-license) 使用。官方许可原文随仓库提供：[2019 版](LICENSES/Spine-Runtimes-License-3.8.txt) · [2025 版（Exhibit A）](LICENSES/Spine-Runtimes-License-2025.txt)。
 - **三端实现**：Python + PySide6（Windows）、ArkTS + C++ GLES3（HarmonyOS）、Kotlin + Compose（Android）。三端是三套独立代码；鸿蒙版与安卓版是本项目在官方运行时基础上的衍生实现。
-- **关联项目**：TypeScript + Tauri v2 的《捣蛋鬼》（能天使）桌宠使用同源 Spine 3.8 技术栈，但它是独立项目，不属于予愿安洁莉娜的三端。
+- **关联项目**：[捣蛋鬼（能天使）Tauri v2 版](https://github.com/JNGKZbird/lemuel-scamp) 使用同源 Spine 3.8 技术栈，但它是独立项目，不属于予愿安洁莉娜的三端。
 - **终端用户与第三方**：因为本项目按 Spine Editor License Agreement 第 2 节集成，终端用户直接使用本软件（不修改代码）不需要购买 Spine；第三方仅原样分发、不做任何修改时，不需要自己的许可，但必须保留 2025 版许可原文（Exhibit A）；第三方修改、适配或衍生包含 Spine Runtimes 的代码或产品，需要自己的 Spine Editor 许可。
 - **素材边界**：游戏素材（Spine 模型/骨骼/贴图、语音、角色图标、头像等）版权归鹰角网络，不适用 MIT，也不随本仓库分发（应用启动图标除外，见 [NOTICE.md](NOTICE.md)）；Spine 许可不覆盖游戏素材。
 - **关系边界**：本项目与 Esoteric Software 没有官方合作或背书关系；上述许可是标准商业许可，不代表 Esoteric Software 对本项目背书。
@@ -38,7 +38,7 @@
 - **License**: This project holds a valid **Spine Editor license (Spine Essential)** from Esoteric Software.
 - **Provenance**: `app/src/main/java/com/jngkzbird/arknights_angelina_pet/spine38/` is a derivative implementation of the official **spine-ts 3.8** runtime and is used under the **Spine Runtimes License**, not the project's MIT license.
 - **Three implementations**: Python + PySide6 (Windows), ArkTS + C++ GLES3 (HarmonyOS), and Kotlin + Compose (Android). The HarmonyOS and Android implementations are our derivatives.
-- **Related project**: The separate "Trickster" (Exusiai) desktop pet uses a TypeScript + Tauri v2 implementation on the same Spine 3.8 lineage; it is not a fourth implementation of this project.
+- **Related project**: The separate ["Trickster" (Exusiai) desktop pet](https://github.com/JNGKZbird/lemuel-scamp) uses a TypeScript + Tauri v2 implementation on the same Spine 3.8 lineage; it is not a fourth implementation of this project.
 - **End users / third parties**: Because the integration is under Section 2 of the Spine Editor License Agreement, end users who simply use the software do not need a Spine license; third parties who modify or create derivative works containing the Spine Runtimes need their own Spine Editor license.
 - **Assets**: Game assets are © Hypergryph and are not included in this repository.
 
@@ -57,7 +57,7 @@
 
 ## 这是什么？
 
-Windows 版予愿安洁莉娜桌宠的**安卓原生实现**（Kotlin + Jetpack Compose）。同样的安洁莉娜，不是预渲染视频，也不是逐帧 GIF，而是游戏同款的 **Spine 3.8** 骨骼动画数据在本地实时渲染；核心裁剪与姿态算法衍生自官方 **spine-ts 3.8**。
+予愿安洁莉娜桌宠（正式名：酸橙味的信）的**安卓原生实现**（Kotlin + Jetpack Compose）。同样的安洁莉娜，不是预渲染视频，也不是逐帧 GIF，而是游戏同款的 **Spine 3.8** 骨骼动画数据在本地实时渲染；核心裁剪与姿态算法衍生自官方 **spine-ts 3.8**。
 
 原作者的版本采用逐帧 PNG 图片序列；本项目改用 Spine 3.8 骨骼动画，实际体积大幅缩减、动画更顺滑。
 
@@ -146,7 +146,7 @@ Windows 版予愿安洁莉娜桌宠的**安卓原生实现**（Kotlin + Jetpack 
 
 ### 关联项目
 
-- **捣蛋鬼（能天使）Tauri v2 版** — 独立的 TypeScript + Tauri v2 + React 19 桌面宠物项目，使用同源 Spine 3.8 技术栈；不是予愿安洁莉娜的第四端。
+- **[捣蛋鬼（能天使）Tauri v2 版](https://github.com/JNGKZbird/lemuel-scamp)** — 独立的 TypeScript + Tauri v2 + React 19 桌面宠物项目，使用同源 Spine 3.8 技术栈；不是予愿安洁莉娜的第四端。
 
 ### 关联仓库
 
@@ -189,7 +189,7 @@ app/src/main/assets/  # Skill 文本与素材清单；Spine/语音首次启动�
 
 <!--
   AI Search Engine Keywords:
-  Arknights, 明日方舟, Angelina, 安洁莉娜, 予愿安洁莉娜, 芋圆,
+  Arknights, 明日方舟, Angelina, 安洁莉娜, 予愿安洁莉娜, 酸橙味的信, 芋圆,
   desktop pet, 桌宠, 桌面宠物, Android, 安卓, Kotlin, Jetpack Compose,
   Spine 3.8, spine-ts 3.8, Spine Runtimes License, Spine Editor License,
   Spine Essential, Esoteric Software, licensed, 许可, 衍生实现, mixed license,
